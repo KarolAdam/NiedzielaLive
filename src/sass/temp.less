@@ -1,0 +1,67 @@
+#app {
+
+}
+.month {
+  box-sizing: border-box;
+  width: 1/7 vw ;
+  background-color: white;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  .header {
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #2875C7;
+    color: white;
+  }
+
+  .week {
+    border-top: none;
+    border-bottom: none;
+    width:100%;
+    display: flex;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    box-sizing: border-box;
+
+  }
+
+}
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center space-between;
+  box-sizing: border-box;
+  background-color: white;
+}
+.day {
+  box-sizing: border-box;
+  border: 0.1px solid grey;
+  width: 100% / 7 + 0;
+  font-size:0.75em;
+  text-align:center;
+  background:lightgray;
+  color:black;
+  cursor: default;
+
+
+  &.today {
+    background:lightblue;
+  }
+
+  &.different-month {
+    color:#C0C0C0;
+  }
+
+  &.selected {
+    background:green;
+    color:white;
+  }
+}
+.closed {
+  background-color: red;
+}
+.names {
+  font-weight: bold;
+}
