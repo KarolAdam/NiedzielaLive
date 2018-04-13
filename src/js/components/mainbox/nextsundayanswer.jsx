@@ -14,7 +14,6 @@ export default class NextSundayAnswer extends React.Component {
                 nextAnswerStyle = 'answer-open'
             }
         })
-        console.log(nextSunday)
         return <div className={'next-sunday-answer ' + nextAnswerStyle}> <span>{nextSundayAns}</span> </div>
     }
 }
