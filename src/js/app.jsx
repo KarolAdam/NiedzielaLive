@@ -8,7 +8,7 @@ import Date from "./components/date.jsx";
 import CalendarHeader from "./components/calendar/calendarheader.jsx";
 class App extends React.Component {
     render() {
-        return <div>
+        return <div className='main-div'>
             <div className='header-items'>
                 <Logo/>
                 <Date/>

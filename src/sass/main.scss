@@ -5,174 +5,241 @@ body {
   background: #F6FFF9;
   font-size: 14px;
 }
+
 #app {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  .header-items {
+    background-color: #F6FFF9;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    .logo {
-      font-family: 'Poiret One';
-      font-size: 2rem;
-    }
-    .date {
-      font-family: 'Poiret One';
-      font-size: 1.5rem;
+    justify-content: center ;
+    align-content: center;
+  .main-div {
+    width: 100%;
+    margin: 0 auto;
+  }
+    .header-items {
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        font-family: 'Poiret One';
+        font-size: 2rem;
+      }
+      .date {
+        font-family: 'Poiret One';
+        font-size: 1.5rem;
+      }
     }
   }
-}
-@mixin border-box() {
-  box-sizing:border-box;
-}
-$secondary-colour:#304269;
-$spacing:10px;
-$icon-width:40px;
-$header-height:30px;
-$week-height: 25px;
-$closed-color: #F2294A;
-$border-colour:#304269;
-$open-color: #54DB67;
-.calendar {
-  height: 300px;
-  display: flex;
-  align-content: space-between;
-}
-.month {
-  padding: 10px;
-  margin: 10px;
-  display:block;
-  @include border-box();
-  background:white;
-  width:200px;
-  height: fit-content;
-  border:solid 1px $border-colour;
-  //margin-bottom:10px;
+  @mixin border-box() {
+    box-sizing: border-box;
+  }
+  $secondary-colour: #304269;
+  $spacing: 10px;
+  $icon-width: 40px;
+  $header-height: 30px;
+  $week-height: 25px;
+  $closed-color: #F2294A;
+  $border-colour: #304269;
+  $open-color: #54DB67;
+  .calendar {
+    height: 300px;
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+  }
+  .month {
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    @include border-box();
+    background: white;
+    width: 200px;
+    height: fit-content;
+    border: solid 1px $border-colour;
+    //margin-bottom:10px;
 
-
-
-  >div.header {
-    width:100%;
-    background:$secondary-colour;
-    height:$header-height;
-    color:white;
-    line-height: 2rem;
-    font-size: 0.8rem;
-    text-align: center;
-
-    >span {
-      width:100%;
-      font-weight:bold;
-      text-transform:uppercase;
-      @include border-box;
+    > div.header {
+      width: 100%;
+      background: $secondary-colour;
+      height: $header-height;
+      color: white;
+      line-height: 2rem;
+      font-size: 0.8rem;
       text-align: center;
-      color:inherit;
-    }
-  }
-  >div.week {
-    display: flex;
-    width:100%;
-    border-top:solid 1px $border-colour;
-    height: $week-height;
 
-    &:first-child {
-      border-top:none;
+      > span {
+        width: 100%;
+        font-weight: bold;
+        text-transform: uppercase;
+        @include border-box;
+        text-align: center;
+        color: inherit;
+      }
     }
-
-    >span.day {
-      width:100%/7 + 0;
-      @include border-box;
-      border-left:solid 1px $border-colour;
-      font-size:0.75em;
-      text-align:center;
-      background:white;
-      cursor:pointer;
-      color:black;
+    > div.week {
+      display: flex;
+      width: 100%;
+      border-top: solid 1px $border-colour;
       height: $week-height;
 
-
       &:first-child {
-        border-left:none;
+        border-top: none;
       }
 
-      &.today {
-        background:#E3F2FF;
+      > span.day {
+        width: 100%/7 + 0;
+        @include border-box;
+        border-left: solid 1px $border-colour;
+        font-size: 0.75em;
+        text-align: center;
+        background: white;
+        cursor: pointer;
+        color: black;
+        height: $week-height;
+
+        &:first-child {
+          border-left: none;
+        }
+
+        &.today {
+          background: #E3F2FF;
+        }
+
+        &.different-month {
+          color: #C0C0C0;
+        }
+
+        &.selected {
+          background: $secondary-colour;
+          color: white;
+        }
+        &.closed {
+          background-color: $closed-color;
+
+        }
       }
 
-      &.different-month {
-        color:#C0C0C0;
-      }
-
-      &.selected {
-        background:$secondary-colour;
-        color:white;
-      }
-      &.closed {
-        background-color: $closed-color;
-
+      &.names > span {
+        color: $secondary-colour;
+        font-weight: bold;
       }
     }
-
-    &.names>span {
-      color:$secondary-colour;
-      font-weight:bold;
+  }
+  .legend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    span {
+      display: inline;
+    }
+    height: 30px;
+    width: 300px;
+    .legend_closed {
+      margin: 5px;
+      align-self: center;
+      width: 20px;
+      height: 20px;
+      background-color: $closed-color;
     }
   }
-}
-.legend {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  span {
-    display: inline;
+  .mainbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .this-sunday {
+      max-width: 800px;
+      text-align: center;
+      .this-sunday-question {
+        font-size: 2.5rem;
+      }
+      .this-sunday-answer {
+        font-size: 4.5rem;
+      }
+    }
+    .next-sunday {
+      width: 800px;
+      text-align: center;
+      .next-sunday-question {
+        font-size: 1.2rem;
+      }
+      .next-sunday-answer {
+        font-size: 3.2rem;
+      }
+    }
   }
-  height: 30px;
-  width: 300  px;
-  .legend_closed {
-    margin: 5px;
-    align-self: center;
-    width: 20px;
-    height: 20px;
-    background-color: $closed-color;
-  }}
-.mainbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .this-sunday {
-    width: 800px;
+
+  .answer-closed {
+    color: $closed-color;
+  }
+
+  .answer-open {
+    color: $open-color;
+  }
+  .calendar-header {
+    margin-top: 30px;
+    justify-content: center;
     text-align: center;
-    .this-sunday-question {
-      font-size: 2.5rem;
-    }
-    .this-sunday-answer {
-      font-size: 4.5rem;
-    }
+    height: 30px;
   }
-  .next-sunday {
-    width: 800px;
-    text-align: center;
-    .next-sunday-question {
-      font-size: 1.2rem;
-    }
-    .next-sunday-answer {
-      font-size: 3.2rem;
-    }
+
+@media screen and (max-width: 1365px){
+
+  .calendar { flex-wrap: wrap;
+  height: fit-content;
+  justify-content: center}
+  .month { width: 25%;
+  justify-content: center}
+  .legend {
+
+    justify-content: flex-start;
   }
+
+}
+@media screen and (max-width: 1023px) {
+.header-items {
+.logo {
+}
 }
 
-.answer-closed {
-  color: $closed-color;
+
+}
+@media screen and (max-width: 767px) {
+
+
+  .calendar { flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    justify-self: center;
+  }
+  .month { width: 40%;
+    justify-content: center}
+  .legend {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
 }
 
-.answer-open {
-  color: $open-color;
+@media screen and (max-width: 500px) {
+
+  #app {
+    .header-items {
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      .date {
+        font-size: 0.8rem;
+        align-self: center;
+      }
+      .logo {
+        align-self: center;
+      }
+    }
+  }
+  .month {
+    width: 80%;
+  }
+
 }
- .calendar-header {
-   margin-top: 30px;
-   justify-content: center;
-   text-align: center;
-   height: 30px;
- }
+
