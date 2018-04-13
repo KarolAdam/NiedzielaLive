@@ -7,17 +7,17 @@ export default class Date extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            time: moment().format('LTS'),
+            time: moment().format('ss'),
         }
     }
     componentDidMount() {
-        this.intevalId = setInterval(e => this.setState ({time:moment().format('LTS')}),1000);
+        this.intevalId = setInterval(e => this.setState ({time:moment().format('ss')}),1000);
 
     }
     componentWillUnmount() {
         clearInterval(this.intevalId)
     }
     render() {
-        return <div className='date'>{moment().format('dddd')}, {moment().format("MMM Do YYYY")}, {this.state.time}</div>
+        return <div className='date'>{moment().format('LLLL')}:{this.state.time}</div>
     }
 }
