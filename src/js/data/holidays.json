@@ -883,7 +883,7 @@
  },
  {
    "DATE": "2018-08-26",
-   "SHOPS_OPEN": false,
+   "SHOPS_OPEN": true,
    "DAY": "SUNDAY_NOSHOPS",
    "WEEKDAY": 7
  },
