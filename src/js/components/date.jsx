@@ -8,6 +8,7 @@ export default class Date extends React.Component {
         super(props)
         this.state = {
             time: moment().format('ss'),
+            counter:0
         }
     }
     componentDidMount() {

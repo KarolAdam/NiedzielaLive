@@ -1,6 +1,6 @@
 import React from "react";
 import moment from 'moment';
-import holidays from '../../data/holidays.json'
+import holidays from '../../data/holidays2019.json'
 
 
 export default class Week extends React.Component{
