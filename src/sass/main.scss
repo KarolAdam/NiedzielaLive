@@ -102,7 +102,9 @@ body {
 
         &.today {
           background: #E3F2FF;
-          border: 1.5px solid black;
+          border: 1.5px solid #304269;
+          border-left: 2.5px solid #304269;
+          @include border-box;
         }
 
         &.different-month {
