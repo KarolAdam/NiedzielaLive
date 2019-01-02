@@ -19,6 +19,6 @@ export default class Date extends React.Component {
         clearInterval(this.intevalId)
     }
     render() {
-        return <div className='date'>{moment().format('LLLL')}:{this.state.time}</div>
+        return <div className='date'>{moment().format('LL')}</div>
     }
 }
