@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import 'moment/locale/pl'
-import holidays from '../../data/holidays.json';
+import holidays from '../../data/holidays2019.json'
 
 export default class NextSundayAnswer extends React.Component {
     render() {
