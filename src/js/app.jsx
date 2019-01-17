@@ -33,4 +33,5 @@ document.addEventListener('DOMContentLoaded', function(){
         <App/>,
         document.getElementById('app')
     );
+    console.log("Cześć! Mam na imię Karolina, a to jest mój profil na LinkedIn: https://www.linkedin.com/in/karolina-adamiuk/")
 });
