@@ -7,12 +7,13 @@ import Logo from "./components/logo.jsx";
 import Date from "./components/date.jsx";
 import CalendarHeader from "./components/calendar/calendarheader.jsx";
 import Footer from "./components/footer.jsx";
+
 class App extends React.Component {
     render() {
         return <div className='main-div'>
             <div className='header-items'>
                 <Logo/>
-                <Date/>
+                <Date/>git
             </div>
 
             <Mainbox/>
@@ -25,7 +26,6 @@ class App extends React.Component {
         </div>
     }
 }
-
 
 
 document.addEventListener('DOMContentLoaded', function(){
