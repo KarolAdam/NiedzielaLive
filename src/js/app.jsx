@@ -6,6 +6,7 @@ import Legend from './components/calendar/legend.jsx'
 import Logo from "./components/logo.jsx";
 import Date from "./components/date.jsx";
 import CalendarHeader from "./components/calendar/calendarheader.jsx";
+import Footer from "./components/footer.jsx";
 class App extends React.Component {
     render() {
         return <div className='main-div'>
@@ -20,7 +21,7 @@ class App extends React.Component {
             <Calendar/>
             <br/>
             <Legend/>
-
+            <Footer/>
         </div>
     }
 }

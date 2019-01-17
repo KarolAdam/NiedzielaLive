@@ -28,6 +28,13 @@ body {
         font-size: 1.5rem;
       }
     }
+    .footer {
+      color: #C0C0C0;
+      display: flex;
+      align-self: flex-end;
+      justify-content: flex-end;
+
+    }
   }
   @mixin border-box() {
     box-sizing: border-box;
