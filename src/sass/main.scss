@@ -1,240 +1,243 @@
 //font-family: 'Poiret One', cursive;
 //font-family: 'Raleway', sans-serif;
 body {
-  font-family: 'Raleway', sans-serif;
-  background: #F6FFF9;
+  font-family: "Raleway", sans-serif;
+  background: #f6fff9;
   font-size: 14px;
 }
 
 #app {
-    background-color: #F6FFF9;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center ;
-    align-content: center;
+  background-color: #f6fff9;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   .main-div {
     max-width: 100%;
     margin: 0 auto;
   }
-    .header-items {
-      display: flex;
-      justify-content: space-between;
-      .logo {
-        font-family: 'Poiret One';
-        font-size: 2rem;
-      }
-      .date {
-        font-family: 'Poiret One';
-        font-size: 1.5rem;
-      }
-    }
-    .footer {
-      color: #C0C0C0;
-      display: flex;
-      align-self: flex-end;
-      justify-content: flex-end;
-
-    }
-  }
-  @mixin border-box() {
-    box-sizing: border-box;
-  }
-  $secondary-colour: #304269;
-  $spacing: 10px;
-  $icon-width: 40px;
-  $header-height: 30px;
-  $week-height: 25px;
-  $closed-color: #F2294A;
-  $border-colour: #304269;
-  $open-color: #54DB67;
-  .calendar {
-    height: 300px;
+  .header-items {
     display: flex;
-    align-content: space-between;
-    justify-content: center;
-  }
-  .month {
-    padding: 10px;
-    margin: 10px;
-    display: block;
-    @include border-box();
-    background: white;
-    width: 200px;
-    height: fit-content;
-    border: solid 1px $border-colour;
-    //margin-bottom:10px;
-
-    > div.header {
-      width: 100%;
-      background: $secondary-colour;
-      height: $header-height;
-      color: white;
-      line-height: 2rem;
-      font-size: 0.8rem;
-      text-align: center;
-
-      > span {
-        width: 100%;
-        font-weight: bold;
-        text-transform: uppercase;
-        @include border-box;
-        text-align: center;
-        color: inherit;
-      }
+    justify-content: space-between;
+    .logo {
+      font-family: "Poiret One";
+      font-size: 2rem;
     }
-    > div.week {
-      display: flex;
+    .date {
+      font-family: "Poiret One";
+      font-size: 1.5rem;
+    }
+  }
+  .footer {
+    color: #c0c0c0;
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+  }
+}
+@mixin border-box() {
+  box-sizing: border-box;
+}
+$secondary-colour: #304269;
+$spacing: 10px;
+$icon-width: 40px;
+$header-height: 30px;
+$week-height: 25px;
+$closed-color: #f2294a;
+$border-colour: #304269;
+$open-color: #54db67;
+.calendar {
+  height: 300px;
+  display: flex;
+  align-content: space-between;
+  justify-content: center;
+}
+.month {
+  padding: 10px;
+  margin: 10px;
+  display: block;
+  @include border-box();
+  background: white;
+  width: 200px;
+  height: fit-content;
+  border: solid 1px $border-colour;
+  //margin-bottom:10px;
+
+  > div.header {
+    width: 100%;
+    background: $secondary-colour;
+    height: $header-height;
+    color: white;
+    line-height: 2rem;
+    font-size: 0.8rem;
+    text-align: center;
+
+    > span {
       width: 100%;
-      border-top: solid 1px $border-colour;
+      font-weight: bold;
+      text-transform: uppercase;
+      @include border-box;
+      text-align: center;
+      color: inherit;
+    }
+  }
+  > div.week {
+    display: flex;
+    width: 100%;
+    border-top: solid 1px $border-colour;
+    height: $week-height;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    > span.day {
+      width: 100%/7 + 0;
+      @include border-box;
+      border-left: solid 1px $border-colour;
+      font-size: 0.75em;
+      text-align: center;
+      background: white;
+      cursor: pointer;
+      color: black;
       height: $week-height;
 
       &:first-child {
-        border-top: none;
+        border-left: none;
       }
 
-      > span.day {
-        width: 100%/7 + 0;
+      &.today {
+        background: #e3f2ff;
+        border: 1.5px solid #304269;
+        border-left: 2.5px solid #304269;
         @include border-box;
-        border-left: solid 1px $border-colour;
-        font-size: 0.75em;
-        text-align: center;
-        background: white;
-        cursor: pointer;
-        color: black;
-        height: $week-height;
-
-        &:first-child {
-          border-left: none;
-        }
-
-        &.today {
-          background: #E3F2FF;
-          border: 1.5px solid #304269;
-          border-left: 2.5px solid #304269;
-          @include border-box;
-        }
-
-        &.different-month {
-          color: #C0C0C0;
-        }
-
-        &.selected {
-          background: $secondary-colour;
-          color: white;
-        }
-        &.closed {
-          background-color: $closed-color;
-
-        }
       }
 
-      &.names > span {
-        color: $secondary-colour;
-        font-weight: bold;
-        padding-top: 2px;
+      &.different-month {
+        color: #c0c0c0;
+      }
+
+      &.selected {
+        background: $secondary-colour;
+        color: white;
+      }
+      &.closed {
+        background-color: $closed-color;
       }
     }
-  }
-  .legend {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    span {
-      display: inline;
-    }
-    height: 30px;
-    width: 300px;
-    .legend_closed {
-      margin: 5px;
-      align-self: center;
-      width: 20px;
-      height: 20px;
-      background-color: $closed-color;
-    }
-  }
-  .mainbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .this-sunday {
-      max-width: 800px;
-      text-align: center;
-      .this-sunday-question {
-        font-size: 2.5rem;
-      }
-      .this-sunday-answer {
-        font-size: 4.5rem;
-      }
-    }
-    .next-sunday {
-      width: 800px;
-      max-width: 100%;
-      text-align: center;
-      .next-sunday-question {
-        font-size: 1.2rem;
-      }
-      .next-sunday-answer {
-        font-size: 3.2rem;
-      }
-    }
-  }
 
-  .answer-closed {
-    color: $closed-color;
+    &.names > span {
+      color: $secondary-colour;
+      font-weight: bold;
+      padding-top: 2px;
+    }
   }
-
-  .answer-open {
-    color: $open-color;
+}
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  span {
+    display: inline;
   }
-  .calendar-header {
-    margin-top: 30px;
-    justify-content: center;
+  height: 30px;
+  width: 300px;
+  .legend_closed {
+    margin: 5px;
+    align-self: center;
+    width: 20px;
+    height: 20px;
+    background-color: $closed-color;
+  }
+}
+.mainbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .this-sunday {
+    max-width: 800px;
     text-align: center;
-    height: 30px;
+    .this-sunday-question {
+      font-size: 2.5rem;
+    }
+    .this-sunday-answer {
+      font-size: 4.5rem;
+    }
   }
+  .next-sunday {
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+    .next-sunday-question {
+      font-size: 1.2rem;
+    }
+    .next-sunday-answer {
+      font-size: 3.2rem;
+    }
+  }
+}
 
-@media screen and (max-width: 1365px){
+.answer-closed {
+  color: $closed-color;
+}
 
-  .calendar { flex-wrap: wrap;
-  height: fit-content;
-  justify-content: center}
-  .month { width: 25%;
-  justify-content: center}
+.answer-open {
+  color: $open-color;
+}
+.calendar-header {
+  margin-top: 30px;
+  justify-content: center;
+  text-align: center;
+  height: 30px;
+}
+
+@media screen and (max-width: 1365px) {
+  .calendar {
+    flex-wrap: wrap;
+    height: fit-content;
+    justify-content: center;
+  }
+  .month {
+    width: 25%;
+    justify-content: center;
+  }
   .legend {
-
     justify-content: flex-start;
   }
-
 }
 @media screen and (max-width: 1023px) {
-.header-items {
-.logo {
-}
-}
-
-
+  .header-items {
+    .logo {
+    }
+  }
 }
 @media screen and (max-width: 767px) {
-
-
-  .calendar { flex-wrap: wrap;
+  .calendar {
+    flex-wrap: wrap;
     width: 100%;
     height: fit-content;
     justify-content: center;
     justify-self: center;
   }
-  .month { width: 40%;
-    justify-content: center}
+  .month {
+    width: 40%;
+    justify-content: center;
+  }
   .legend {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
-
+  .mainbox .this-sunday {
+    max-width: 100%;
+    text-align: center;
+  }
+  .mainbox .this-sunday .this-sunday-answer {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
-
   #app {
     .header-items {
       flex-wrap: wrap;
@@ -252,6 +255,4 @@ body {
   .month {
     width: 80%;
   }
-
 }
-

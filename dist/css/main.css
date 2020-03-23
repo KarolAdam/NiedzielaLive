@@ -1,11 +1,11 @@
 body {
-  font-family: 'Raleway', sans-serif;
-  background: #F6FFF9;
+  font-family: "Raleway", sans-serif;
+  background: #f6fff9;
   font-size: 14px;
 }
 
 #app {
-  background-color: #F6FFF9;
+  background-color: #f6fff9;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -32,17 +32,17 @@ body {
 }
 
 #app .header-items .logo {
-  font-family: 'Poiret One';
+  font-family: "Poiret One";
   font-size: 2rem;
 }
 
 #app .header-items .date {
-  font-family: 'Poiret One';
+  font-family: "Poiret One";
   font-size: 1.5rem;
 }
 
 #app .footer {
-  color: #C0C0C0;
+  color: #c0c0c0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,7 +130,7 @@ body {
 }
 
 .month > div.week > span.day.today {
-  background: #E3F2FF;
+  background: #e3f2ff;
   border: 1.5px solid #304269;
   border-left: 2.5px solid #304269;
   -webkit-box-sizing: border-box;
@@ -138,7 +138,7 @@ body {
 }
 
 .month > div.week > span.day.different-month {
-  color: #C0C0C0;
+  color: #c0c0c0;
 }
 
 .month > div.week > span.day.selected {
@@ -147,7 +147,7 @@ body {
 }
 
 .month > div.week > span.day.closed {
-  background-color: #F2294A;
+  background-color: #f2294a;
 }
 
 .month > div.week.names > span {
@@ -180,7 +180,7 @@ body {
   align-self: center;
   width: 20px;
   height: 20px;
-  background-color: #F2294A;
+  background-color: #f2294a;
 }
 
 .mainbox {
@@ -227,11 +227,11 @@ body {
 }
 
 .answer-closed {
-  color: #F2294A;
+  color: #f2294a;
 }
 
 .answer-open {
-  color: #54DB67;
+  color: #54db67;
 }
 
 .calendar-header {
@@ -292,6 +292,13 @@ body {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+  }
+  .mainbox .this-sunday {
+    max-width: 100%;
+    text-align: center;
+  }
+  .mainbox .this-sunday .this-sunday-answer {
+    font-size: 3rem;
   }
 }
 
