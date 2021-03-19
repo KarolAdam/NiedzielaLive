@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: ['whatwg-fetch', './src/js/app.jsx'],
     output: {path: path.join(__dirname, "./dist/js/"), filename: 'out.js'},
     watch: true,
