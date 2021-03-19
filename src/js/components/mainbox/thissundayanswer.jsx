@@ -10,7 +10,9 @@ export default class ThisSundayAnswer extends React.Component {
     const closestSunday = moment()
       .isoWeekday(7)
       .format("YYYY-MM-DD");
+    console.log(closestSunday)
     holidays.forEach(function(el) {
+      console.log(el)
       if (el.DATE == closestSunday && el.SHOPS_OPEN) {
         thisSundayAns = "TAK, ale lepiej #zostańwdomu";
         thisAnswerStyle = "answer-open";
